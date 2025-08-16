@@ -2,6 +2,16 @@
 // Bootstrap import
 @import "bootstrap/scss/bootstrap";
 
+// Reset scroll position on page load
+html {
+  scroll-behavior: smooth;
+}
+
+// Força o scroll para o topo no carregamento da página
+body {
+  scroll-behavior: smooth;
+}
+
 // Custom variables - Paleta Monocromática Neutra
 :root {
   // Tons principais para destaque e hierarquia

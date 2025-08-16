@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "@/app/styles/styles.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BackToTop from "@/components/BackToTop";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,10 +40,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            html, body {
+              scroll-behavior: smooth;
+            }
+            /* Força scroll para o topo no carregamento */
+            html {
+              scroll-padding-top: 0;
+            }
+          `
+        }} />
+      </head>
       <body 
         className={`${geistSans.variable} ${geistMono.variable}`}
         suppressHydrationWarning={true}
       >
+        <ScrollToTop />
         {children}
         <BackToTop />
         <script 
