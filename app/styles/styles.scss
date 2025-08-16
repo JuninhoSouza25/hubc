@@ -2,12 +2,19 @@
 // Bootstrap import
 @import "bootstrap/scss/bootstrap";
 
-// Custom variables
+// Custom variables - Paleta Monocromática Neutra
 :root {
-  --primary-color: #007bff;
-  --secondary-color: #6c757d;
-  --dark-color: #212529;
-  --light-color: #f8f9fa;
+  // Tons principais para destaque e hierarquia
+  --primary-color: #2d3748;        // Cinza escuro sofisticado para destaque principal
+  --secondary-color: #4a5568;      // Cinza médio para elementos secundários
+  --accent-color: #68727d;         // Cinza azulado sutil para acentos suaves
+  
+  // Escala de cinzas para textos e backgrounds
+  --dark-color: #1a202c;          // Cinza muito escuro para textos importantes
+  --medium-color: #718096;        // Cinza médio claro para textos descritivos
+  --light-color: #f7fafc;         // Cinza muito claro para backgrounds sutis
+  
+  // Cores neutras básicas
   --white-color: #ffffff;
   --black-color: #000000;
 }
@@ -120,6 +127,31 @@ body {
   }
 }
 
+// Bootstrap overrides para garantir paleta monocromática
+.btn-primary-1 {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
+  
+  &:hover, &:focus, &:active {
+    background-color: var(--dark-color) !important;
+    border-color: var(--dark-color) !important;
+    color: white !important;
+  }
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
 // About section
 .about-image-container {
   width: 100%;
@@ -144,6 +176,16 @@ body {
 .benefit-icon {
   font-size: 3rem;
   line-height: 1;
+  
+  svg {
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+  
+  .benefit-card:hover & svg {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  }
 }
 
 // Contact section
@@ -202,7 +244,7 @@ body {
   
   &:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(45, 55, 72, 0.25);
   }
 }
 
@@ -217,6 +259,56 @@ body {
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// Custom button variants
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  
+  &:hover {
+    background-color: var(--dark-color);
+    border-color: var(--dark-color);
+    color: white;
+  }
+  
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba(45, 55, 72, 0.25);
+  }
+}
+
+.btn-dark-neutral {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  
+  &:hover {
+    background-color: var(--dark-color);
+    border-color: var(--dark-color);
+    color: white;
+  }
+  
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba(45, 55, 72, 0.25);
+  }
+  
+  &:active {
+    background-color: var(--dark-color) !important;
+    border-color: var(--dark-color) !important;
+  }
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+  
+  &:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
   }
 }
 
@@ -238,9 +330,38 @@ section {
   background-color: #000000 !important;
 }
 
+.bg-dark-accent {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-medium {
+  background-color: var(--medium-color) !important;
+}
+
 // Text colors
 .text-primary {
   color: var(--primary-color) !important;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.text-medium {
+  color: var(--medium-color) !important;
+}
+
+.text-highlight {
+  color: var(--dark-color) !important;
+  font-weight: 600;
+}
+
+.text-icon-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-icon-accent {
+  color: var(--accent-color) !important;
 }
 
 // Custom utilities
@@ -260,7 +381,7 @@ section {
   }
   
   &:focus {
-    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(45, 55, 72, 0.25);
   }
 }
 

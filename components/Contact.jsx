@@ -132,7 +132,7 @@ const Contact = () => {
                 <div className="col-12">
                   <button
                     type="submit"
-                    className="btn btn-primary btn-lg w-100"
+                    className="btn btn-primary-1 btn-lg w-100"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (

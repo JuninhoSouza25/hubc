@@ -86,7 +86,7 @@ const FAQ = () => {
                 Nossa equipe de especialistas está pronta para ajudar você com qualquer questão.
               </p>
               <button 
-                className="btn btn-primary btn-lg"
+                className="btn btn-dark-neutral btn-lg"
                 onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Entre em Contato

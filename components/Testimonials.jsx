@@ -65,7 +65,7 @@ const Testimonials = () => {
         
         <div className="row mt-5">
           <div className="col-lg-6 mx-auto text-center">
-            <div className="cta-box p-4 bg-primary text-white rounded">
+            <div className="cta-box p-4 bg-dark-accent text-white rounded">
               <h4 className="fw-bold mb-3">Junte-se aos nossos clientes satisfeitos</h4>
               <p className="mb-3">
                 Faça parte da nossa rede de parceiros e transforme seu negócio com nossas soluções.

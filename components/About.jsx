@@ -21,13 +21,13 @@ const About = () => {
               <div className="row g-4">
                 <div className="col-sm-6">
                   <div className="stat-item text-center">
-                    <h3 className="display-6 fw-bold text-primary">500+</h3>
+                    <h3 className="display-6 fw-bold text-highlight">500+</h3>
                     <p className="mb-0 text-muted">Projetos Atendidos</p>
                   </div>
                 </div>
                 <div className="col-sm-6">
                   <div className="stat-item text-center">
-                    <h3 className="display-6 fw-bold text-primary">98%</h3>
+                    <h3 className="display-6 fw-bold text-highlight">98%</h3>
                     <p className="mb-0 text-muted">Satisfação dos Clientes</p>
                   </div>
                 </div>
