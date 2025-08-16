@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hub-C - Landing Page
 
-## Getting Started
+## 📋 Sobre o Projeto
 
-First, run the development server:
+O **Hub-C** é uma landing page moderna e responsiva desenvolvida para uma empresa especializada no comércio atacado de módulos de energia solar. A empresa conecta a qualidade e preços competitivos dos produtos chineses com a agilidade de entrega do mercado brasileiro.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🎯 Objetivo
+
+Criar uma presença digital profissional que demonstre a credibilidade da Hub-C no mercado de energia solar, facilitando o contato com clientes empresariais e destacando os diferenciais competitivos da empresa.
+
+## 🚀 Tecnologias Utilizadas
+
+- **Next.js 15.4.6** - Framework React para produção
+- **React 19.1.0** - Biblioteca JavaScript para interfaces
+- **Bootstrap 5.3.7** - Framework CSS para design responsivo
+- **SCSS/Sass** - Pré-processador CSS para estilos customizados
+- **JavaScript (ES6+)** - Linguagem de programação principal
+
+## 🏗️ Arquitetura do Projeto
+
+### Estrutura de Componentes
+
+```
+components/
+├── Navbar.jsx          # Navegação fixa com logo
+├── Hero.jsx            # Seção principal com call-to-action
+├── About.jsx           # Sobre a empresa e estatísticas
+├── Benefits.jsx        # Benefícios dos produtos
+├── Testimonials.jsx    # Depoimentos de clientes
+├── FAQ.jsx             # Perguntas frequentes
+├── Contact.jsx         # Formulário de contato
+└── Footer.jsx          # Rodapé com informações
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Funcionalidades Implementadas
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- ✅ **Design Responsivo** - Adaptável a todos os dispositivos
+- ✅ **Navegação Suave** - Scroll suave entre seções
+- ✅ **Formulário de Contato** - Captura de leads qualificados
+- ✅ **Seção de Benefícios** - Destaque dos diferenciais
+- ✅ **Depoimentos** - Prova social e credibilidade
+- ✅ **FAQ Interativo** - Accordion com perguntas frequentes
+- ✅ **Otimizações SEO** - Meta tags e estrutura semântica
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Design e UX
 
-## Learn More
+- **Identidade Visual** - Logo da Hub-C integrado ao design
+- **Cores Corporativas** - Paleta profissional com azul e cinza
+- **Imagens Contextuais** - Fotos reais de contêineres e painéis solares
+- **Animações Sutis** - Efeitos de fade-in e hover suaves
+- **Tipografia Moderna** - Font stack otimizada para legibilidade
 
-To learn more about Next.js, take a look at the following resources:
+## 📱 Responsividade
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+O projeto foi desenvolvido seguindo a abordagem **Mobile First**, garantindo uma experiência otimizada em:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 📱 **Mobile** (320px - 768px)
+- 📟 **Tablet** (768px - 1024px)
+- 💻 **Desktop** (1024px+)
 
-## Deploy on Vercel
+## 🚀 Como Executar
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Pré-requisitos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Node.js 18+ instalado
+- npm, yarn, pnpm ou bun
+
+### Instalação
+
+```bash
+# Clone o repositório
+git clone [URL_DO_REPOSITÓRIO]
+
+# Entre no diretório
+cd hubc
+
+# Instale as dependências
+npm install
+
+# Execute o servidor de desenvolvimento
+npm run dev
+```
+
+### Acesso
+
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para visualizar o projeto.
+
+## 📦 Scripts Disponíveis
+
+```bash
+npm run dev          # Servidor de desenvolvimento
+npm run build        # Build para produção
+npm run start        # Servidor de produção
+npm run lint         # Análise de código
+```
+
+## 🌟 Diferenciais Técnicos
+
+- **Performance Otimizada** - Lazy loading e otimização de imagens
+- **SEO Ready** - Meta tags e estrutura semântica
+- **Acessibilidade** - ARIA labels e navegação por teclado
+- **Clean Code** - Componentes reutilizáveis e código organizado
+- **Cross-browser** - Compatibilidade com navegadores modernos
+
+## 📞 Informações de Contato
+
+A landing page inclui múltiplos pontos de contato:
+
+- **Formulário de Orçamento** - Captura de leads qualificados
+- **WhatsApp** - Atendimento direto
+- **Email** - Comunicação formal
+- **Telefone** - Suporte comercial
+
+## 🔄 Status do Projeto
+
+✅ **Concluído** - Landing page totalmente funcional e responsiva
+
+---
+
+**Desenvolvido com ❤️ para Hub-C - Painéis Solares Direto da China**
