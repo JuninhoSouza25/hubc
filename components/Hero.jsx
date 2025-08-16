@@ -1,17 +1,16 @@
 'use client';
 
+import { scrollToElement } from '../utils/client';
+
 const Hero = () => {
   const scrollToContact = () => {
-    const element = document.getElementById('contato');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToElement('contato');
   };
 
   return (
     <section id="home" className="hero-section">
       <div className="container">
-        <div className="row min-vh-100 align-items-center">
+        <div className="row align-items-center">
           <div className="col-lg-8 mx-auto text-center">
             <div className="hero-content">
               <h1 className="hero-title display-3 fw-bold text-white mb-4">

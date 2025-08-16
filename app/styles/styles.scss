@@ -49,6 +49,7 @@ body {
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   padding: 1rem 0;
+  z-index: 1030; // Garante que fique acima de outros elementos
   
   &.navbar-scrolled {
     background: rgba(0, 0, 0, 0.95) !important;
@@ -92,6 +93,7 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding-top: 70px; // Espaço para o navbar fixo
   
   .hero-overlay {
     position: absolute;
@@ -245,6 +247,12 @@ body {
 
 // Responsive adjustments
 @media (max-width: 768px) {
+  .hero-section {
+    padding-top: 80px; // Adiciona espaço para o navbar fixo
+    height: auto;
+    height: 80vh;
+  }
+  
   .hero-title {
     font-size: 2.5rem !important;
   }
@@ -255,6 +263,44 @@ body {
   
   .navbar-brand {
     font-size: 1.25rem;
+  }
+}
+
+// Extra small devices (portrait phones)
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: 90px; // Mais espaço em telas muito pequenas
+    padding-bottom: 2rem;
+  }
+  
+  .hero-content {
+    padding: 1rem 0;
+  }
+  
+  .hero-title {
+    font-size: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .hero-actions .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+  
+  .hero-actions .btn:last-child {
+    margin-bottom: 0;
   }
 }
 
