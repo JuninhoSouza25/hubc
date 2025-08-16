@@ -5,6 +5,7 @@ import { isClient, scrollToElement } from '../utils/client';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     if (!isClient) return;
@@ -17,8 +18,17 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const scrollToSection = (sectionId) => {
     scrollToElement(sectionId);
+    closeMenu(); // Fecha o menu após clicar em um item
   };
 
   return (
@@ -31,16 +41,15 @@ const Navbar = () => {
         <button 
           className="navbar-toggler" 
           type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav"
+          onClick={toggleMenu}
           aria-controls="navbarNav" 
-          aria-expanded="false" 
+          aria-expanded={isMenuOpen} 
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
         
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <button 
