@@ -9,8 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "bootstrap": "^5.3.7",
+    "next": "15.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.4.6"
+    "sass": "^1.90.0",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0"
   }
 }
