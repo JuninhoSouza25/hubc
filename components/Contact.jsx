@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ const Contact = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -24,15 +26,72 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setShowError(false);
+    setShowSuccess(false);
     
-    // Simular envio do formulário
-    setTimeout(() => {
+    // Verificar se as variáveis de ambiente estão configuradas
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS não configurado. Verifique as variáveis de ambiente.');
+      setShowError(true);
       setIsSubmitting(false);
+      return;
+    }
+
+    console.log('Configurações EmailJS:', {
+      serviceId,
+      templateId: templateId.substring(0, 10) + '...',
+      publicKey: publicKey.substring(0, 10) + '...'
+    });
+
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        to_name: 'Hub-C',
+        reply_to: formData.email,
+      };
+
+      console.log('Enviando email com parâmetros:', templateParams);
+
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      console.log('Email enviado com sucesso!', result.status, result.text);
       setShowSuccess(true);
       setFormData({ name: '', phone: '', email: '', message: '' });
       
+      // Esconder mensagem de sucesso após 5 segundos
       setTimeout(() => setShowSuccess(false), 5000);
-    }, 1000);
+      
+    } catch (error) {
+      console.error('Erro ao enviar email:', error);
+      
+      // Mensagem de erro específica baseada no tipo de erro
+      if (error.status === 400) {
+        console.error('Erro 400: Verifique se o Template ID está correto no EmailJS Dashboard');
+      } else if (error.status === 401) {
+        console.error('Erro 401: Verifique se a Public Key está correta');
+      } else if (error.status === 404) {
+        console.error('Erro 404: Verifique se o Service ID está correto');
+      }
+      
+      setShowError(true);
+      
+      // Esconder mensagem de erro após 8 segundos
+      setTimeout(() => setShowError(false), 8000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -53,11 +112,27 @@ const Contact = () => {
           <div className="col-lg-8 mx-auto">
             {showSuccess && (
               <div className="alert alert-success alert-dismissible fade show mb-4" role="alert">
-                <strong>Sucesso!</strong> Sua mensagem foi enviada com sucesso. Nossa equipe entrará em contato em breve.
+                <strong>✅ Sucesso!</strong> Sua mensagem foi enviada com sucesso. Nossa equipe entrará em contato em breve.
                 <button 
                   type="button" 
                   className="btn-close" 
                   onClick={() => setShowSuccess(false)}
+                  aria-label="Close"
+                ></button>
+              </div>
+            )}
+
+            {showError && (
+              <div className="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+                <strong>❌ Erro!</strong> Ocorreu um erro ao enviar sua mensagem. 
+                <br />
+                <small>
+                  Por favor, verifique a configuração do EmailJS ou entre em contato diretamente pelo telefone/email.
+                </small>
+                <button 
+                  type="button" 
+                  className="btn-close" 
+                  onClick={() => setShowError(false)}
                   aria-label="Close"
                 ></button>
               </div>
