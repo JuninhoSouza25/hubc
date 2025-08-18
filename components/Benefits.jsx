@@ -1,31 +1,40 @@
 const Benefits = () => {
   const benefits = [
-    {
+      {
       icon: (
         <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" className="text-highlight">
-          <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L13.5 2.5L16.17 5.33C15.44 5.12 14.67 5 13.87 5C10.03 5 7 8.03 7 11.87C7 15.71 10.03 18.74 13.87 18.74C17.71 18.74 20.74 15.71 20.74 11.87V9H21ZM3 13V11L6 8L8 10L11 7L13 9V11L11 13L8 10L6 12L3 13Z"/>
+          <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z"/>
         </svg>
       ),
-      title: "Preço Competitivo",
-      description: "Importação direta da China com os melhores preços do mercado, sem intermediários."
+      title: "Estoque Nacional",
+      description: "Pronta entrega sem espera por importação."
     },
     {
       icon: (
         <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" className="text-highlight">
-          <path d="M20 8H19V7C19 5.9 18.1 5 17 5H16V4C16 2.9 15.1 2 14 2H10C8.9 2 8 2.9 8 4V5H7C5.9 5 5 5.9 5 7V8H4C3.45 8 3 8.45 3 9V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V9C21 8.45 20.55 8 20 8ZM10 4H14V5H10V4ZM7 7H17V8H7V7ZM19 19H5V10H19V19ZM17 12H7V14H17V12ZM17 15H7V17H17V15Z"/>
+          <path d="M12 2C15.87 2 19 5.13 19 9C19 14.25 12 22 12 22S5 14.25 5 9C5 5.13 8.13 2 12 2ZM12 6C10.34 6 9 7.34 9 9S10.34 12 12 12 15 10.66 15 9 13.66 6 12 6Z"/>
+        </svg>
+      ),
+      title: "Retirada Imediata",
+      description: "Retire hoje mesmo em nossos CD's"
+    },
+    {
+      icon: (
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" className="text-highlight">
+          <path d="M12 2C17.52 2 22 6.48 22 12S17.52 22 12 22S2 17.52 2 12S6.48 2 12 2ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z"/>
         </svg>
       ),
       title: "Entrega Rápida",
-      description: "Estoque estratégico no Brasil garante entregas em até 5 dias úteis."
+      description: "7-15 dias úteis direto na sua obra"
     },
     {
       icon: (
         <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" className="text-highlight">
-          <path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C7.6 4 4 7.6 4 12S7.6 20 12 20 20 16.4 20 12 16.4 4 12 4M10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/>
+          <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 7C13.4 7 14.8 8.6 14.8 10V11.5C15.4 11.5 16 12.1 16 12.7V16.2C16 16.7 15.6 17.2 15.1 17.2H8.9C8.4 17.2 8 16.8 8 16.3V12.8C8 12.3 8.4 11.9 8.9 11.9V10.4C8.9 8.6 10.2 7 12 7ZM12 8.2C10.2 8.2 10.2 9.2 10.2 10V11.5H13.8V10C13.8 9.2 13.8 8.2 12 8.2Z"/>
         </svg>
       ),
-      title: "Qualidade Garantida",
-      description: "Produtos certificados com garantia de fábrica e suporte técnico especializado."
+      title: "Garantia Premium",
+      description: "15 anos produto / 30 anos linear"
     }
   ];
 
@@ -45,7 +54,7 @@ const Benefits = () => {
         
         <div className="row g-4">
           {benefits.map((benefit, index) => (
-            <div key={index} className="col-lg-4">
+            <div key={index} className="col-lg-3">
               <div className="benefit-card h-100 p-4 bg-white rounded shadow-sm border hover-card">
                 <div className="text-center mb-4">
                   <div className="benefit-icon mb-3 d-flex justify-content-center">
