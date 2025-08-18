@@ -17,22 +17,22 @@ const Hero = () => {
     {
       title: "Inversores", 
       icon: InversoresIcon,
-      link: "/#",
+      link: "#contato",
     },
     {
       title: "Estruturas",
       icon: EstruturasIcon,
-      link: "/#",
+      link: "#contato",
     },
     {
       title: "Cabos",
       icon: CabosIcon,
-      link: "/#",
+      link: "#contato",
     },
     {
       title: "EV Chargers",
       icon: EVChargersIcon,
-      link: "/#",
+      link: "#contato",
     }
   ];
 
