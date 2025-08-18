@@ -1,4 +1,19 @@
-# 🔧 Solução de Problemas - EmailJS Template ID
+# 🔧 Solução de Problemas - Em#### Content:
+```html
+<h2>Nova mensagem recebida do site Hub-C</h2>
+
+<p><strong>Nome:</strong> {{from_name}}</p>
+<p><strong>Email:</strong> {{from_email}}</p>
+<p><strong>Telefone:</strong> {{phone}}</p>
+<p><strong>Nome da Empresa:</strong> {{company_name}}</p>
+<p><strong>CNPJ:</strong> {{cnpj}}</p>
+
+<h3>Mensagem:</h3>
+<p>{{message}}</p>
+
+<hr>
+<p><em>Esta mensagem foi enviada através do formulário de contato do site Hub-C.</em></p>
+``` ID
 
 ## ❌ Erro: "The template ID not found"
 

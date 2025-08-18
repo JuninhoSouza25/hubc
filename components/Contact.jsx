@@ -6,6 +6,8 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
+    companyName: '',
+    cnpj: '',
     phone: '',
     email: '',
     message: ''
@@ -17,10 +19,37 @@ const Contact = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    
+    // Formatação específica para CNPJ
+    if (name === 'cnpj') {
+      // Remove todos os caracteres não numéricos
+      const numericValue = value.replace(/\D/g, '');
+      
+      // Aplica a máscara do CNPJ
+      let formattedValue = numericValue;
+      if (numericValue.length > 2) {
+        formattedValue = numericValue.replace(/^(\d{2})(\d)/, '$1.$2');
+      }
+      if (numericValue.length > 5) {
+        formattedValue = formattedValue.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+      }
+      if (numericValue.length > 8) {
+        formattedValue = formattedValue.replace(/^(\d{2})\.(\d{3})\.(\d{3})(\d)/, '$1.$2.$3/$4');
+      }
+      if (numericValue.length > 12) {
+        formattedValue = formattedValue.replace(/^(\d{2})\.(\d{3})\.(\d{3})\/(\d{4})(\d)/, '$1.$2.$3/$4-$5');
+      }
+      
+      setFormData(prev => ({
+        ...prev,
+        [name]: formattedValue
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -50,6 +79,8 @@ const Contact = () => {
     try {
       const templateParams = {
         from_name: formData.name,
+        company_name: formData.companyName,
+        cnpj: formData.cnpj,
         from_email: formData.email,
         phone: formData.phone,
         message: formData.message,
@@ -68,7 +99,7 @@ const Contact = () => {
 
       console.log('Email enviado com sucesso!', result.status, result.text);
       setShowSuccess(true);
-      setFormData({ name: '', phone: '', email: '', message: '' });
+      setFormData({ name: '', companyName: '', cnpj: '', phone: '', email: '', message: '' });
       
       // Esconder mensagem de sucesso após 5 segundos
       setTimeout(() => setShowSuccess(false), 5000);
@@ -158,7 +189,7 @@ const Contact = () => {
                 
                 <div className="col-md-6">
                   <label htmlFor="phone" className="form-label fw-semibold">
-                    Telefone *
+                    Telefone / Whatsapp *
                   </label>
                   <input
                     type="tel"
@@ -169,6 +200,37 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     placeholder="(11) 99999-9999"
+                  />
+                </div>
+                
+                <div className="col-md-6">
+                  <label htmlFor="companyName" className="form-label fw-semibold">
+                    Nome da Empresa
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control form-control-lg"
+                    id="companyName"
+                    name="companyName"
+                    value={formData.companyName}
+                    onChange={handleInputChange}
+                    placeholder="Nome da sua empresa"
+                  />
+                </div>
+                
+                <div className="col-md-6">
+                  <label htmlFor="cnpj" className="form-label fw-semibold">
+                    CNPJ
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control form-control-lg"
+                    id="cnpj"
+                    name="cnpj"
+                    value={formData.cnpj}
+                    onChange={handleInputChange}
+                    placeholder="00.000.000/0000-00"
+                    maxLength="18"
                   />
                 </div>
                 

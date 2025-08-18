@@ -38,6 +38,8 @@ Nova mensagem do site Hub-C - {{from_name}}
 <p><strong>Nome:</strong> {{from_name}}</p>
 <p><strong>Email:</strong> {{from_email}}</p>
 <p><strong>Telefone:</strong> {{phone}}</p>
+<p><strong>Nome da Empresa:</strong> {{company_name}}</p>
+<p><strong>CNPJ:</strong> {{cnpj}}</p>
 
 <h3>Mensagem:</h3>
 <p>{{message}}</p>

@@ -10,8 +10,9 @@ const Hero = () => {
   return (
     <section id="home" className="hero-section">
       <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-8 mx-auto text-center">
+        <div className="row">
+
+          <div className="col-12 col-md-6 mx-auto text-center">
             <div className="hero-content">
               <h1 className="hero-title display-3 fw-bold text-white mb-4">
                 Painéis Solares Direto da China
@@ -39,9 +40,14 @@ const Hero = () => {
               </div>
             </div>
           </div>
+
+          <div className='col-12 col-md-6'>
+
+          </div>
         </div>
       </div>
       <div className="hero-overlay"></div>
+      <div className="hero-geometric"></div>
     </section>
   );
 };

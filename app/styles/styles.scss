@@ -119,12 +119,35 @@ body {
 // Hero section
 .hero-section {
   height: 70vh;
-  background: url('/hero-bg.jpg') center center/cover no-repeat;
+  background: 
+    linear-gradient(135deg, 
+      var(--dark-color) 0%, 
+      var(--primary-color) 40%, 
+      var(--secondary-color) 70%, 
+      var(--accent-color) 100%
+    );
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   padding-top: 70px; // Espaço para o navbar fixo
+  
+  // Adiciona um padrão sutil de textura
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.04) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.01) 3px, transparent 3px);
+    background-size: 120px 120px, 80px 80px, 200px 200px;
+    opacity: 0.6;
+    z-index: 1;
+  }
   
   .hero-overlay {
     position: absolute;
@@ -132,13 +155,18 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
+    background: linear-gradient(
+      135deg, 
+      rgba(0, 0, 0, 0.2) 0%, 
+      rgba(0, 0, 0, 0.1) 50%, 
+      rgba(0, 0, 0, 0.05) 100%
+    );
+    z-index: 2;
   }
   
   .container {
     position: relative;
-    z-index: 2;
+    z-index: 3;
   }
   
   .hero-title {
@@ -157,6 +185,37 @@ body {
   
   .hero-actions {
     animation: fadeInUp 1s ease-out 0.6s both;
+  }
+  
+  // Elementos decorativos geométricos sofisticados
+  &::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    right: 8%;
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    z-index: 1;
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .hero-geometric {
+    position: absolute;
+    top: 65%;
+    left: 8%;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, 
+      rgba(255, 255, 255, 0.03), 
+      rgba(255, 255, 255, 0.01)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transform: rotate(45deg);
+    z-index: 1;
+    animation: float 10s ease-in-out infinite reverse;
+    border-radius: 10px;
   }
 }
 
@@ -273,6 +332,18 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-5px) rotate(-1deg);
   }
 }
 
