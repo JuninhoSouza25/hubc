@@ -769,6 +769,11 @@ section {
 
 // Responsive adjustments for mobile
 @media (max-width: 768px) {
+
+  .hero-section{
+    height: 100vh;
+  }
+
   .back-to-top {
     bottom: 1.5rem;
     right: 1.5rem;
