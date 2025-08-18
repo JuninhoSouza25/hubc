@@ -386,6 +386,26 @@ body {
   }
 }
 
+// Footer specific styles for better accessibility
+.footer-link {
+  color: #a0aec0 !important; // Cinza claro mais acessível que text-muted
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: var(--white-color) !important;
+    text-decoration: none;
+  }
+}
+
+.footer-text {
+  color: #a0aec0 !important; // Cinza claro mais acessível para textos no footer
+}
+
+.footer-text-muted {
+  color: #9ca3af !important; // Cinza médio mais legível que o text-muted padrão
+}
+
 .hover-card {
   transition: all 0.3s ease;
   

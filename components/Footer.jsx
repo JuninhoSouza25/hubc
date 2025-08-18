@@ -6,7 +6,7 @@ const Footer = () => {
           <div className="col-lg-4">
             <div className="footer-brand">
               <h4 className="fw-bold mb-3">Hub-C</h4>
-              <p className="text-muted mb-4">
+              <p className="footer-text mb-4">
                 Sua parceira confiável no comércio atacado de módulos de energia solar. 
                 Preço da China, estoque no Brasil.
               </p>
@@ -35,22 +35,22 @@ const Footer = () => {
               <h5 className="fw-bold mb-3">Empresa</h5>
               <ul className="list-unstyled">
                 <li className="mb-2">
-                  <a href="#sobre" className="text-muted text-decoration-none hover-link">
+                  <a href="#sobre" className="footer-link">
                     Sobre Nós
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="#beneficios" className="text-muted text-decoration-none hover-link">
+                  <a href="#beneficios" className="footer-link">
                     Nossos Diferenciais
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="#depoimentos" className="text-muted text-decoration-none hover-link">
+                  <a href="#depoimentos" className="footer-link">
                     Depoimentos
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="#contato" className="text-muted text-decoration-none hover-link">
+                  <a href="#contato" className="footer-link">
                     Contato
                   </a>
                 </li>
@@ -63,16 +63,16 @@ const Footer = () => {
               <h5 className="fw-bold mb-3">Produtos</h5>
               <ul className="list-unstyled">
                 <li className="mb-2">
-                  <span className="text-muted">Painéis Monocristalinos</span>
+                  <span className="footer-text">Painéis Monocristalinos</span>
                 </li>
                 <li className="mb-2">
-                  <span className="text-muted">Painéis Policristalinos</span>
+                  <span className="footer-text">Painéis Policristalinos</span>
                 </li>
                 <li className="mb-2">
-                  <span className="text-muted">Módulos Bifaciais</span>
+                  <span className="footer-text">Módulos Bifaciais</span>
                 </li>
                 <li className="mb-2">
-                  <span className="text-muted">Inversores</span>
+                  <span className="footer-text">Inversores</span>
                 </li>
               </ul>
             </div>
@@ -82,13 +82,13 @@ const Footer = () => {
             <div className="footer-contact">
               <h5 className="fw-bold mb-3">Contato</h5>
               <div className="contact-item mb-2">
-                <small className="text-muted d-block">Email:</small>
+                <small className="footer-text-muted d-block">Email:</small>
                 <a href="mailto:contato@hub-c.com.br" className="text-white text-decoration-none">
                   contato@hub-c.com.br
                 </a>
               </div>
               <div className="contact-item mb-2">
-                <small className="text-muted d-block">Telefone:</small>
+                <small className="footer-text-muted d-block">Telefone:</small>
                 <a href="tel:+5511999999999" className="text-white text-decoration-none">
                   (11) 9999-9999
                 </a>
@@ -101,12 +101,12 @@ const Footer = () => {
         
         <div className="row align-items-center">
           <div className="col-md-6">
-            <p className="text-muted mb-0">
+            <p className="footer-text-muted mb-0">
               © 2025 Hub-C. Todos os direitos reservados.
             </p>
           </div>
           <div className="col-md-6 text-md-end">
-            <p className="text-muted mb-0">
+            <p className="footer-text-muted mb-0">
               Desenvolvido com{' '}
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" className="text-icon-primary d-inline-block">
                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
