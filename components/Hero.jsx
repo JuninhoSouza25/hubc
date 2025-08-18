@@ -57,12 +57,12 @@ const Hero = () => {
                 >
                   Solicitar Orçamento
                 </button>
-                <button 
+                {/* <button 
                   className="btn btn-outline-light btn-lg px-5 py-3 mb-3"
                   onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Saiba Mais
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
