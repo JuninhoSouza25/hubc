@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Benefits from '@/components/Benefits';
+import ModulesProducts from '@/components/ModulesProducts';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       {/* <About /> */}
       <Benefits />
+      <ModulesProducts />
       {/* <Testimonials /> */}
       <FAQ />
       <Contact />
