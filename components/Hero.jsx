@@ -11,14 +11,13 @@ const Hero = () => {
     <section id="home" className="hero-section">
       <div className="container">
         <div className="row">
-          <div className="col-12 mx-auto">
+          <div className="col-12 col-md-6 mx-auto">
             <div className="hero-content">
               <h1 className="hero-title display-3 fw-bold mb-4">
                 Preço da China <br /> Estoque no Brasil
               </h1>
               <p className="hero-description lead mb-5 fs-6">
-                A Hub-C é sua parceira no comércio atacado de módulos de energia solar. <br /> 
-                Oferecemos produtos de alta qualidade com preços competitivos e entrega rápida.
+                Preço de fabricante à partir de 1 container, com retirada ou entrega imediata.
               </p>
               <div className="hero-actions">
                 <button 
@@ -28,6 +27,11 @@ const Hero = () => {
                   Solicitar Orçamento
                 </button>
               </div>
+            </div>
+          </div>
+          <div className="col-12 col-md-6">
+            <div className="hero-image mx-auto">
+              <img src="/ronma-module-bg.png" alt="Hero" className="img-fluid" />
             </div>
           </div>
         </div>
