@@ -403,24 +403,7 @@ body {
       svg {
         width: 3rem;
         height: 3rem;
-      }
-      
-      .number-icon {
-        width: 3rem;
-        height: 3rem;
-        background-color: var(--dark-color);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        
-        span {
-          color: var(--white-color);
-          font-size: 1.25rem;
-          font-weight: 700;
-          font-family: 'Arial', sans-serif;
-        }
+        color: var(--primary-color);
       }
     }
     
@@ -438,10 +421,7 @@ body {
     }
     
     &:hover .differential-icon {
-      .number-icon {
-        background-color: var(--secondary-color);
-        transform: scale(1.1);
-      }
+      color: var(--secondary-color);
     }
   }
 }
