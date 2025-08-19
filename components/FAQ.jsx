@@ -8,7 +8,7 @@ const FAQ = () => {
   const faqItems = [
     {
       question: "Qual é o prazo de entrega dos módulos solares?",
-      answer: "Com nosso estoque estratégico no Brasil, conseguimos entregar em até 5 dias úteis para a maioria das regiões. Para grandes volumes, o prazo pode ser de 7 a 10 dias úteis."
+      answer: "Produtos disponíveis para retirada imediata. Para entregas, o prazo varia conforme o endereço de destino, mas em média é de até 5 dias úteis para a maioria das regiões."
     },
     {
       question: "Os painéis possuem garantia?",
@@ -16,19 +16,15 @@ const FAQ = () => {
     },
     {
       question: "Posso comprar menos de 1 container?",
-      answer: "Absolutamente! Trabalhamos tanto com grandes volumes quanto com pedidos menores. Nosso estoque no Brasil permite flexibilidade para atender projetos de todos os tamanhos."
+      answer: "Atendemos pedidos a partir de 1 container. No entanto, caso sua demanda seja menor, podemos direcioná-lo a parceiros comerciais que atendem volumes reduzidos."
     },
     {
       question: "Vocês oferecem suporte na instalação?",
-      answer: "Fornecemos suporte técnico completo, incluindo documentação, especificações e orientações para instalação. Também temos uma rede de parceiros instaladores certificados."
+      answer: "Podemos indicar parceiros especializados para apoiar na instalação. A HUB|C atua exclusivamente na venda de módulos solares e não realiza serviços de instalação diretamente."
     },
     {
       question: "Como funciona o processo de importação?",
-      answer: "Nossa equipe cuida de todo o processo de importação, incluindo documentação, desembaraço alfandegário e logística. Você recebe o produto pronto para uso."
-    },
-    {
-      question: "Quais certificações os produtos possuem?",
-      answer: "Todos os nossos produtos possuem certificações internacionais como IEC, CE e também são homologados pelo INMETRO para uso no Brasil."
+      answer: "Os produtos estão disponíveis para retirada imediata, com pagamento em real (R$), sem burocracia, IOF ou longos prazos de espera. O processo de importação já foi realizado por nós."
     }
   ];
 
