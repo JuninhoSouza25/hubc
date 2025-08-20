@@ -7,27 +7,39 @@ const ModulesProducts = () => {
     scrollToElement('contato');
   };
 
+  const downloadDatasheet = (datasheetUrl) => {
+    try {
+      window.open(datasheetUrl, '_blank');
+    } catch (error) {
+      console.error('Erro ao abrir datasheet:', error);
+      alert('Não foi possível abrir o datasheet. Verifique se o arquivo existe.');
+    }
+  };
+
   const modules = [
     {
       title: "Ronma 610w",
       series: "SKYMAX series",
       power: "610-650w",
       efficiency: "23.25% eficiência",
-      image: "/ronma-module.png"
+      image: "/ronma-module.png",
+      datasheet: "/datasheets/610w.pdf"
     },
     {
-      title: "Ronma 580w", 
+      title: "Ronma 585w", 
       series: "High efficiency",
       power: "580-650w",
       efficiency: "22.8% eficiência",
-      image: "/ronma-module.png"
+      image: "/ronma-module.png",
+      datasheet: "/datasheets/585w.pdf"
     },
     {
       title: "Ronma 550w",
       series: "Standard series", 
       power: "550-650w",
       efficiency: "21.5% eficiência",
-      image: "/ronma-module.png"
+      image: "/ronma-module.png",
+      datasheet: "/datasheets/550w.pdf"
     }
   ];
 
@@ -69,12 +81,20 @@ const ModulesProducts = () => {
                     </div>
                   </div>
                   
-                  <button 
-                    className="btn btn-primary w-100 mt-3"
-                    onClick={scrollToContact}
-                  >
-                    Entre em contato
-                  </button>
+                  <div className="module-actions mt-3">
+                    <button 
+                      className="btn btn-primary w-100 mb-2"
+                      onClick={scrollToContact}
+                    >
+                      Entre em contato
+                    </button>
+                    <button 
+                      className="btn btn-outline-secondary w-100"
+                      onClick={() => downloadDatasheet(module.datasheet)}
+                    >
+                      Download Datasheet
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
