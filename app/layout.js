@@ -43,6 +43,18 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DQJB9TRRE"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0DQJB9TRRE');
+          `
+        }} />
+        
         <style dangerouslySetInnerHTML={{
           __html: `
             html, body {
