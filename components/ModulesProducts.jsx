@@ -23,7 +23,7 @@ const ModulesProducts = () => {
       power: "610-650w",
       efficiency: "23.25% eficiência",
       image: "/ronma-module.png",
-      datasheet: "/datasheets/610w.pdf"
+      datasheet: "https://drive.google.com/file/d/1GoLJzZQ5FZkW1XndJc7SxOqWRGxClmgY/view?usp=sharing"
     },
     {
       title: "Ronma 585w", 
@@ -31,15 +31,15 @@ const ModulesProducts = () => {
       power: "580-650w",
       efficiency: "22.8% eficiência",
       image: "/ronma-module.png",
-      datasheet: "/datasheets/585w.pdf"
+      datasheet: "https://drive.google.com/file/d/1gOoXFDdgYlYePQI7O9JTkqjUPDjLznmh/view?usp=sharing"
     },
     {
-      title: "Ronma 550w",
+      title: "Ronma 700w",
       series: "Standard series", 
-      power: "550-650w",
-      efficiency: "21.5% eficiência",
+      power: "685-730w",
+      efficiency: "23.52% eficiência",
       image: "/ronma-module.png",
-      datasheet: "/datasheets/550w.pdf"
+      datasheet: "https://drive.google.com/file/d/1dh7mW4V5cKxAmcTvh0eOYwVFzEJnHijZ/view?usp=sharing"
     }
   ];
 
