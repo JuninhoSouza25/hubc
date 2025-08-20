@@ -16,21 +16,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Hub-C - Painéis Solares | Preço da China, Estoque no Brasil",
-  description: "Hub-C oferece módulos de energia solar com preço competitivo da China e estoque no Brasil. Entrega rápida e qualidade garantida para seu projeto de energia solar.",
-  keywords: "painéis solares, módulos solares, energia solar, atacado, importação, Brasil, China, Hub-C",
+  title: "Hub|C - Painéis Solares | Preço da China, Estoque no Brasil",
+  description: "Hub|C oferece módulos de energia solar com preço competitivo da China e estoque no Brasil. Entrega rápida e qualidade garantida para seu projeto de energia solar.",
+  keywords: "painéis solares, módulos solares, energia solar, atacado, importação, Brasil, China, Hub|C",
   openGraph: {
-    title: "Hub-C - Painéis Solares | Preço da China, Estoque no Brasil",
-    description: "Hub-C oferece módulos de energia solar com preço competitivo da China e estoque no Brasil. Entrega rápida e qualidade garantida para seu projeto de energia solar.",
+    title: "Hub|C - Painéis Solares | Preço da China, Estoque no Brasil",
+    description: "Hub|C oferece módulos de energia solar com preço competitivo da China e estoque no Brasil. Entrega rápida e qualidade garantida para seu projeto de energia solar.",
     type: "website",
     locale: "pt_BR",
     url: "https://hub-c.com.br",
-    siteName: "Hub-C",
+    siteName: "Hub|C",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hub-C - Painéis Solares | Preço da China, Estoque no Brasil",
-    description: "Hub-C oferece módulos de energia solar com preço competitivo da China e estoque no Brasil. Entrega rápida e qualidade garantida para seu projeto de energia solar.",
+    title: "Hub|C - Painéis Solares | Preço da China, Estoque no Brasil",
+    description: "Hub|C oferece módulos de energia solar com preço competitivo da China e estoque no Brasil. Entrega rápida e qualidade garantida para seu projeto de energia solar.",
   },
   robots: {
     index: true,

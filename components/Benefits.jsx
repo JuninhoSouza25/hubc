@@ -44,7 +44,7 @@ const Benefits = () => {
         <div className="row">
           <div className="col-lg-8 mx-auto text-center mb-5">
             <h2 className="display-5 fw-bold mb-4">
-              Por que escolher a Hub-C?
+              Por que escolher a Hub|C?
             </h2>
             <p className="lead text-muted">
               Oferecemos a melhor combinação de preço, qualidade e agilidade no mercado de painéis solares.
