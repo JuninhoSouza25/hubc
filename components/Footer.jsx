@@ -107,8 +107,8 @@ const Footer = () => {
               </div>
               <div className="contact-item mb-2">
                 <small className="footer-text-muted d-block">Telefone:</small>
-                <a href="tel:+5511999999999" className="text-white text-decoration-none">
-                  (11) 9999-9999
+                <a href="tel:+5511940681638" className="text-white text-decoration-none">
+                  (11) 94068-1638
                 </a>
               </div>
             </div>
