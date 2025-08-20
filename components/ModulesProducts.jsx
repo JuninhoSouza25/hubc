@@ -18,31 +18,28 @@ const ModulesProducts = () => {
 
   const modules = [
     {
-      title: "Ronma 585w", 
+      title: "Ronma 585w bifacial", 
       series: "High efficiency",
       power: "580-650w",
       efficiency: "22.8% eficiência",
       image: "/ronma-module.png",
-      datasheet: "https://drive.google.com/file/d/1gOoXFDdgYlYePQI7O9JTkqjUPDjLznmh/view?usp=sharing",
-      description: "Módulo bifacial de alta eficiência."
+      datasheet: "https://drive.google.com/file/d/1gOoXFDdgYlYePQI7O9JTkqjUPDjLznmh/view?usp=sharing"
     },
     {
-      title: "Ronma 610w",
+      title: "Ronma 610w bifacial",
       series: "SKYMAX series",
       power: "610-650w",
       efficiency: "23.25% eficiência",
       image: "/ronma-module.png",
-      datasheet: "https://drive.google.com/file/d/1GoLJzZQ5FZkW1XndJc7SxOqWRGxClmgY/view?usp=sharing",
-      description: "Módulo bifacial de alta eficiência."
+      datasheet: "https://drive.google.com/file/d/1GoLJzZQ5FZkW1XndJc7SxOqWRGxClmgY/view?usp=sharing"
     },
     {
-      title: "Ronma 700w",
+      title: "Ronma 700w bifacial",
       series: "Standard series", 
       power: "685-730w",
       efficiency: "23.52% eficiência",
       image: "/ronma-module.png",
-      datasheet: "https://drive.google.com/file/d/1dh7mW4V5cKxAmcTvh0eOYwVFzEJnHijZ/view?usp=sharing",
-      description: "Módulo bifacial de alta eficiência."
+      datasheet: "https://drive.google.com/file/d/1dh7mW4V5cKxAmcTvh0eOYwVFzEJnHijZ/view?usp=sharing"
     }
   ];
 
@@ -72,9 +69,8 @@ const ModulesProducts = () => {
                 <div className="module-content">
                   <h3 className="module-title">{module.title}</h3>
                   <p className="module-series fw-semibold">{module.series}</p>
-                  <p className="module-description text-muted mb-2">{module.description}</p>
                   
-                  <div className="module-specs">
+                  {/* <div className="module-specs">
                     <div className="spec-item">
                       <span className="spec-label">Potência:</span>
                       <span className="spec-value">{module.power}</span>
@@ -83,7 +79,7 @@ const ModulesProducts = () => {
                       <span className="spec-label">Eficiência:</span>
                       <span className="spec-value">{module.efficiency}</span>
                     </div>
-                  </div>
+                  </div> */}
                   
                   <div className="module-actions mt-3">
                     <button 
