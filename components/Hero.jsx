@@ -21,7 +21,7 @@ const Hero = () => {
               </p>
               <div className="hero-actions">
                 <button 
-                  className="btn btn-light btn-lg px-5 py-3 me-3 mb-3"
+                  className="btn btn-primary-1 btn-lg px-5 py-3 me-3 mb-3"
                   onClick={scrollToContact}
                 >
                   Solicitar Orçamento
