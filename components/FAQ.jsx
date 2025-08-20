@@ -25,6 +25,10 @@ const FAQ = () => {
     {
       question: "Como funciona o processo de importação?",
       answer: "Os produtos estão disponíveis para retirada imediata, com pagamento em real (R$), sem burocracia, IOF ou longos prazos de espera. O processo de importação já foi realizado por nós."
+    },
+    {
+      question: "A HUB|C tem outros produtos além de módulos?",
+      answer: "Sim. Nossa linha é ampla e inclui inversores, carregadores, estruturas e muito mais. Além disso, atuamos em outras linhas de negócio além do setor solar. Apresente sua demanda e teremos prazer em avaliá-la."
     }
   ];
 
