@@ -18,20 +18,20 @@ const ModulesProducts = () => {
 
   const modules = [
     {
-      title: "Ronma 610w",
-      series: "SKYMAX series",
-      power: "610-650w",
-      efficiency: "23.25% eficiência",
-      image: "/ronma-module.png",
-      datasheet: "https://drive.google.com/file/d/1GoLJzZQ5FZkW1XndJc7SxOqWRGxClmgY/view?usp=sharing"
-    },
-    {
       title: "Ronma 585w", 
       series: "High efficiency",
       power: "580-650w",
       efficiency: "22.8% eficiência",
       image: "/ronma-module.png",
       datasheet: "https://drive.google.com/file/d/1gOoXFDdgYlYePQI7O9JTkqjUPDjLznmh/view?usp=sharing"
+    },
+    {
+      title: "Ronma 610w",
+      series: "SKYMAX series",
+      power: "610-650w",
+      efficiency: "23.25% eficiência",
+      image: "/ronma-module.png",
+      datasheet: "https://drive.google.com/file/d/1GoLJzZQ5FZkW1XndJc7SxOqWRGxClmgY/view?usp=sharing"
     },
     {
       title: "Ronma 700w",
