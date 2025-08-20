@@ -23,7 +23,8 @@ const ModulesProducts = () => {
       power: "580-650w",
       efficiency: "22.8% eficiência",
       image: "/ronma-module.png",
-      datasheet: "https://drive.google.com/file/d/1gOoXFDdgYlYePQI7O9JTkqjUPDjLznmh/view?usp=sharing"
+      datasheet: "https://drive.google.com/file/d/1gOoXFDdgYlYePQI7O9JTkqjUPDjLznmh/view?usp=sharing",
+      description: "Módulo bifacial de alta eficiência."
     },
     {
       title: "Ronma 610w",
@@ -31,7 +32,8 @@ const ModulesProducts = () => {
       power: "610-650w",
       efficiency: "23.25% eficiência",
       image: "/ronma-module.png",
-      datasheet: "https://drive.google.com/file/d/1GoLJzZQ5FZkW1XndJc7SxOqWRGxClmgY/view?usp=sharing"
+      datasheet: "https://drive.google.com/file/d/1GoLJzZQ5FZkW1XndJc7SxOqWRGxClmgY/view?usp=sharing",
+      description: "Módulo bifacial de alta eficiência."
     },
     {
       title: "Ronma 700w",
@@ -39,7 +41,8 @@ const ModulesProducts = () => {
       power: "685-730w",
       efficiency: "23.52% eficiência",
       image: "/ronma-module.png",
-      datasheet: "https://drive.google.com/file/d/1dh7mW4V5cKxAmcTvh0eOYwVFzEJnHijZ/view?usp=sharing"
+      datasheet: "https://drive.google.com/file/d/1dh7mW4V5cKxAmcTvh0eOYwVFzEJnHijZ/view?usp=sharing",
+      description: "Módulo bifacial de alta eficiência."
     }
   ];
 
@@ -69,6 +72,7 @@ const ModulesProducts = () => {
                 <div className="module-content">
                   <h3 className="module-title">{module.title}</h3>
                   <p className="module-series fw-semibold">{module.series}</p>
+                  <p className="module-description text-muted mb-2">{module.description}</p>
                   
                   <div className="module-specs">
                     <div className="spec-item">

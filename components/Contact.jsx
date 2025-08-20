@@ -310,7 +310,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <h5 className="fw-bold">Telefone</h5>
-                  <p className="mb-0">(11) 9999-9999</p>
+                  <p className="mb-0">(11) 94068-1638</p>
                 </div>
               </div>
               
