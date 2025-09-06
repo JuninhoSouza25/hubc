@@ -96,6 +96,8 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
           async
         />
+        <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/3842d6c7-96b3-4212-a990-83c058953749-loader.js" ></script>
+
       </body>
     </html>
   );
