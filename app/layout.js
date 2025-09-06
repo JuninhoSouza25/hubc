@@ -1,9 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/app/styles/styles.scss";
+import "@/app/styles/newsletter-popup.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BackToTop from "@/components/BackToTop";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsappComponent from "@/components/WhatsappComponent";
+import NewsletterPopup from "@/components/NewsletterPopup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -89,6 +91,7 @@ export default function RootLayout({ children }) {
         <ScrollToTop />
         {children}
         <BackToTop />
+        <NewsletterPopup />
         {/* <WhatsappComponent /> */}
         <script 
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" 
