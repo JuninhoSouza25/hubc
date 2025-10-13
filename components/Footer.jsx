@@ -118,12 +118,17 @@ const Footer = () => {
         <hr className="my-4 border-secondary" />
         
         <div className="row align-items-center">
-          <div className="col-md-6">
-            <p className="footer-text-muted mb-0">
-              © 2025 Hub-C. Todos os direitos reservados.
-            </p>
+          <div className="col-md-8">
+            <div className="company-info">
+              <p className="footer-text-muted mb-1">
+                Hub|C Módulos Solares - CNPJ: 26.571.831/0001-07
+              </p>
+              <p className="footer-text-muted mb-0">
+                © 2025 Hub-C. Todos os direitos reservados.
+              </p>
+            </div>
           </div>
-          <div className="col-md-6 text-md-end">
+          <div className="col-md-4 text-md-end">
             <p className="footer-text-muted mb-0">
               Desenvolvido com{' '}
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" className="text-icon-primary d-inline-block">
