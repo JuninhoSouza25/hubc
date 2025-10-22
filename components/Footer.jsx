@@ -120,8 +120,8 @@ const Footer = () => {
         <div className="row align-items-center">
           <div className="col-md-8">
             <div className="company-info">
-              <p className="footer-text-muted mb-1">
-                Hub|C Módulos Solares - CNPJ: 26.571.831/0001-07
+              <p className="mb-1 text-black">
+                THIAGO CAMPAGNOLI VARANDA - CNPJ: 26.571.831/0001-07
               </p>
               <p className="footer-text-muted mb-0">
                 © 2025 Hub-C. Todos os direitos reservados.
