@@ -17,7 +17,7 @@ const Hero = () => {
                 Preço da China <br /> Estoque no Brasil
               </h1>
               <p className="hero-description lead mb-5 fs-6">
-                Preço de fabricante à partir de 1 container, com retirada ou entrega imediata.
+                Preço de fabricante, com retirada ou entrega imediata.
               </p>
               <div className="hero-actions">
                 <button 

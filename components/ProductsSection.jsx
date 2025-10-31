@@ -12,21 +12,21 @@ const ProductsSection = () => {
     {
       title: "Inversores", 
       icon: InversoresIcon,
-      link: "#contato",
+      link: "#inversores",
+    },
+    {
+      title: "Baterias",
+      icon: EVChargersIcon,
+      link: "#baterias",
     },
     {
       title: "Estruturas",
       icon: EstruturasIcon,
-      link: "#contato",
+      link: "#estruturas",
     },
     {
       title: "Cabos",
       icon: CabosIcon,
-      link: "#contato",
-    },
-    {
-      title: "EV Chargers",
-      icon: EVChargersIcon,
       link: "#contato",
     }
   ];
