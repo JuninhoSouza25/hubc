@@ -34,16 +34,72 @@ export const EstruturasIcon = ({ className = "w-6 h-6" }) => (
   </svg>
 );
 
-export const CabosIcon = ({ className = "w-6 h-6" }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3 12c0-2 2-4 4-4s4 2 4 4-2 4-4 4-4-2-4-4z" stroke="currentColor" strokeWidth="1.5" fill="currentColor" opacity="0.3"/>
-    <path d="M13 12c0-2 2-4 4-4s4 2 4 4-2 4-4 4-4-2-4-4z" stroke="currentColor" strokeWidth="1.5" fill="currentColor" opacity="0.5"/>
-    <path d="M7 12h10" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-    <path d="M5 10v4M7 8v8M17 8v8M19 10v4" stroke="currentColor" strokeWidth="1"/>
-    <circle cx="7" cy="12" r="1" fill="currentColor"/>
-    <circle cx="17" cy="12" r="1" fill="currentColor"/>
+export const BatteryIcon = ({ className = "w-6 h-6" }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* corpo da bateria */}
+    <rect
+      x="1.5"
+      y="6"
+      width="17"
+      height="12"
+      rx="2.2"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      fill="currentColor"
+      opacity="0.06"
+    />
+    {/* terminal positivo */}
+    <rect
+      x="19.5"
+      y="9.5"
+      width="2"
+      height="5"
+      rx="0.5"
+      stroke="currentColor"
+      strokeWidth="1"
+      fill="currentColor"
+      opacity="0.9"
+    />
+
+    {/* indicador de carga — divisões */}
+    <rect x="3.5" y="8.2" width="3" height="7.6" rx="0.6" fill="currentColor" opacity="0.5" />
+    <rect x="7.5" y="8.2" width="3" height="7.6" rx="0.6" fill="currentColor" opacity="0.35" />
+    <rect x="11.5" y="8.2" width="3" height="7.6" rx="0.6" fill="currentColor" opacity="0.2" />
+
+    {/* contornos internos finos para estilizar */}
+    <path d="M3.5 8.2v7.6" stroke="currentColor" strokeWidth="0.6" strokeLinecap="round" opacity="0.15" />
+    <path d="M7.5 8.2v7.6" stroke="currentColor" strokeWidth="0.6" strokeLinecap="round" opacity="0.12" />
+    <path d="M11.5 8.2v7.6" stroke="currentColor" strokeWidth="0.6" strokeLinecap="round" opacity="0.1" />
+
+    {/* símbolo de raio (carga) centralizado sobre os blocos */}
+    <path
+      d="M9.2 9.6 L7.9 12.0 L9.8 12.0 L8.9 14.4 L11.0 11.0 L9.2 11.0 Z"
+      fill="currentColor"
+      opacity="0.95"
+      transform="translate(0.8,0.2) scale(0.9)"
+    />
+
+    {/* traço externo mais forte */}
+    <rect
+      x="1.5"
+      y="6"
+      width="17"
+      height="12"
+      rx="2.2"
+      stroke="currentColor"
+      strokeWidth="1"
+      fill="none"
+      strokeLinecap="round"
+      opacity="0.9"
+    />
   </svg>
 );
+
 
 export const EVChargersIcon = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -87,6 +87,27 @@ const ModulesProducts = () => {
     }
   ]
 
+  const ecoflow = [
+    {
+      title: "EcoFlow Delta 2 Max",
+      series: "Estação de Energia Portátil 3400W / 2048Wh",
+      power: "trifásico",
+      image: "/ecoflow-1.png",
+    },
+    {
+      title: "EcoFlow River 3 PLUS",
+      series: "Estação De Energia Portátil 600W",
+      power: "trifásico",
+      image: "/ecoflow-2.png",
+    },
+    {
+      title: "EcoFlow 220W Painel Solar Portátil",
+      series: "Série EcoFlow",
+      power: "trifásico",
+      image: "/ecoflow-3.png",
+    }
+  ]
+
   const structures = [
     {
       title: "Estrutura flutuante",
@@ -98,7 +119,7 @@ const ModulesProducts = () => {
 
   return (
     <section className="modules-section py-5">
-      <div className="container py-5">
+      <div className="container-fluid py-5">
         <div className="row">
           <div className="col-12 text-center mb-5">
             <h2 className="section-title display-4 fw-bold text-dark mb-4">
@@ -107,47 +128,49 @@ const ModulesProducts = () => {
           </div>
         </div>
         
-        <div className="row g-4" id="modulos">
-          <h3 className="mb-4 text-center">Módulos Solares</h3>
-          {modules.map((module, index) => (
-            <div key={index} className="col-lg-4 col-md-6">
-              <div className="module-card h-100">
-                <div className="module-image">
-                  <img 
-                    src={module.image} 
-                    alt={module.title}
-                    className="module-img"
-                  />
-                </div>
-                
-                <div className="module-content">
-                  <h3 className="module-title">{module.title}</h3>
-                  <p className="module-series fw-semibold">{module.series}</p>
+        <div className='container'>
+          <div className="row g-4 mx-0 mx-md-5" id="modulos">
+            <h3 className="mb-4 text-center">Módulos Solares</h3>
+            {modules.map((module, index) => (
+              <div key={index} className="col-lg-4 col-md-6">
+                <div className="module-card h-100">
+                  <div className="module-image">
+                    <img 
+                      src={module.image} 
+                      alt={module.title}
+                      className="module-img"
+                    />
+                  </div>
                   
-                  <div className="module-actions mt-3">
-                    <button 
-                      className="btn btn-primary w-100 mb-2"
-                      onClick={scrollToContact}
-                    >
-                      Entre em contato
-                    </button>
-                    <button 
-                      className="btn btn-outline-secondary w-100"
-                      onClick={() => downloadDatasheet(module.datasheet)}
-                    >
-                      Download Datasheet
-                    </button>
+                  <div className="module-content">
+                    <h3 className="module-title">{module.title}</h3>
+                    <p className="module-series fw-semibold">{module.series}</p>
+                    
+                    <div className="module-actions mt-3">
+                      <button 
+                        className="btn btn-primary w-100 mb-2"
+                        onClick={scrollToContact}
+                      >
+                        Entre em contato
+                      </button>
+                      <button 
+                        className="btn btn-outline-secondary w-100"
+                        onClick={() => downloadDatasheet(module.datasheet)}
+                      >
+                        Download Datasheet
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
       <div className="container-fluid bg-body py-5" id="inversores">  
           <div className='container'>
-            <div className="row g-4 mx-5">
+            <div className="row g-4 mx-0 mx-md-5">
             <h3 className="mb-4 text-center">Inversores</h3>
             {inverters.map((inverter, index) => (
               <div key={index} className="col-lg-4 col-md-6">
@@ -188,7 +211,7 @@ const ModulesProducts = () => {
 
       <div className="container-fluid py-5" id="baterias">  
           <div className='container'>
-            <div className="row g-4 mx-5" >
+            <div className="row g-4 mx-0 mx-md-5" >
             <h3 className="mb-4 text-center">Baterias</h3>
             {batteries.map((battery, index) => (
               <div key={index} className="col-lg-4 col-md-6">
@@ -227,9 +250,50 @@ const ModulesProducts = () => {
         </div>
       </div>
 
-            <div className="container-fluid bg-body py-5" id="estruturas">  
+      <div className="container-fluid bg-body py-5" id="ecoflow">  
+        <div className='container'>
+          <div className="row g-4 mx-0 mx-md-5" >
+            <h3 className="mb-4 text-center">EcoFlow</h3>
+            {ecoflow.map((battery, index) => (
+              <div key={index} className="col-lg-4 col-md-6">
+                <div className="module-card h-100">
+                  <div className="module-image">
+                    <img 
+                      src={battery.image} 
+                      alt={battery.title}
+                      className="module-img"
+                    />
+                  </div>
+                  
+                  <div className="module-content">
+                    <h3 className="module-title">{battery.title}</h3>
+                    <p className="module-series fw-semibold">{battery.series}</p>
+
+                    <div className="module-actions mt-3">
+                      <button 
+                        className="btn btn-primary w-100 mb-2"
+                        onClick={scrollToContact}
+                      >
+                        Entre em contato
+                      </button>
+                      {/* <button 
+                        className="btn btn-outline-secondary w-100"
+                        onClick={() => downloadDatasheet(inverter.datasheet)}
+                      >
+                        Download Datasheet
+                      </button> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+        <div className="container-fluid py-5" id="estruturas">  
           <div className='container'>
-            <div className="row g-4 mx-5" >
+            <div className="row g-4 mx-0 mx-md-5" >
             <h3 className="mb-4 text-center">Estruturas</h3>
             {structures.map((structure, index) => (
               <div key={index} className="col-lg-4 col-md-6">

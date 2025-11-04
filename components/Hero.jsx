@@ -1,6 +1,20 @@
 'use client';
 
 import { scrollToElement } from '../utils/client';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const images = [
+  '/carrossel/carrossel.png',
+  '/carrossel/carrossel-1.png',
+  '/carrossel/carrossel-2.png',
+  '/carrossel/carrossel-3.png',
+  '/carrossel/carrossel-4.png',
+  '/carrossel/carrossel-5.png'
+];
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -20,7 +34,7 @@ const Hero = () => {
                 Preço de fabricante, com retirada ou entrega imediata.
               </p>
               <div className="hero-actions">
-                <button 
+                <button
                   className="btn btn-primary-1 btn-lg px-5 py-3 me-3 mb-3"
                   onClick={scrollToContact}
                 >
@@ -31,7 +45,21 @@ const Hero = () => {
           </div>
           <div className="col-12 col-md-6">
             <div className="hero-image mx-auto">
-              <img src="/ronma-module-bg.png" alt="Hero" className="img-fluid" />
+              <Swiper
+                modules={[Navigation, Pagination, Autoplay]}
+                navigation={false}
+                pagination={false}
+                loop={true}
+                autoplay={{ delay: 4000, disableOnInteraction: false }}
+                spaceBetween={20}
+                slidesPerView={1}
+              >
+                {images.map((src, idx) => (
+                  <SwiperSlide key={idx}>
+                    <img src={src} alt={`Hero ${idx + 1}`} className="img-fluid" />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </div>

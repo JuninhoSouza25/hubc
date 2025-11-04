@@ -1,6 +1,6 @@
 'use client';
 
-import { ModulosIcon, InversoresIcon, EstruturasIcon, CabosIcon, EVChargersIcon } from './ProductIcons';
+import { ModulosIcon, InversoresIcon, EstruturasIcon, BatteryIcon, EVChargersIcon } from './ProductIcons';
 
 const ProductsSection = () => {
   const products = [
@@ -20,14 +20,14 @@ const ProductsSection = () => {
       link: "#baterias",
     },
     {
+      title: "Ecoflow",
+      icon: BatteryIcon,
+      link: "#ecoflow",
+    },
+    {
       title: "Estruturas",
       icon: EstruturasIcon,
       link: "#estruturas",
-    },
-    {
-      title: "Cabos",
-      icon: CabosIcon,
-      link: "#contato",
     }
   ];
 
