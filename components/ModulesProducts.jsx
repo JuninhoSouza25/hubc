@@ -18,27 +18,23 @@ const ModulesProducts = () => {
 
   const modules = [
     {
-      title: "Ronma 585w bifacial", 
-      series: "High efficiency",
+      title: "585w bifacial", 
+      // series: "High efficiency",
       power: "580-650w",
       efficiency: "22.8% eficiência",
       image: "/ronma-module-img.png",
       datasheet: "https://drive.google.com/file/d/1gOoXFDdgYlYePQI7O9JTkqjUPDjLznmh/view?usp=sharing"
     },
     {
-      title: "Ronma 610w bifacial",
-      series: "SKYMAX series",
+      title: "610w bifacial",
+      // series: "SKYMAX series",
       power: "610-650w",
       efficiency: "23.25% eficiência",
       image: "/ronma-module-img.png",
       datasheet: "https://drive.google.com/file/d/1GoLJzZQ5FZkW1XndJc7SxOqWRGxClmgY/view?usp=sharing"
     },
     {
-      title: "Ronma 700w bifacial",
-      series: "Standard series", 
-      power: "685-730w",
-      efficiency: "23.52% eficiência",
-      image: "/ronma-module-img.png",
+      title: "module-img.png",
       datasheet: "https://drive.google.com/file/d/1dh7mW4V5cKxAmcTvh0eOYwVFzEJnHijZ/view?usp=sharing"
     }
   ];

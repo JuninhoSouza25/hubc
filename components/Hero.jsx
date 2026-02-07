@@ -9,11 +9,11 @@ import 'swiper/css/pagination';
 
 const images = [
   '/carrossel/carrossel.png',
-  '/carrossel/carrossel-1.png',
+  // '/carrossel/carrossel-1.png',
   '/carrossel/carrossel-2.png',
-  '/carrossel/carrossel-3.png',
-  '/carrossel/carrossel-4.png',
-  '/carrossel/carrossel-5.png'
+  // '/carrossel/carrossel-3.png',
+  // '/carrossel/carrossel-4.png',
+  // '/carrossel/carrossel-5.png'
 ];
 
 const Hero = () => {
